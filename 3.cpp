@@ -17,22 +17,22 @@ int main(){
 
 			switch(faces){
 				case 1: c1++;
-					p1 = (c1*100)/6;
+					p1 = (c1*100)/num;
 					break;
 				case 2: c2++;
-					p2 = (c2*100)/6;
+					p2 = (c2*100)/num;
 					break;
 				case 3: c3++;
-					p3 = (c3*100)/6;
+					p3 = (c3*100)/num;
 					break;
 				case 4: c4++;
-					p4 = (c4*100)/6;
+					p4 = (c4*100)/num;
 					break;
 				case 5: c5++;
-					p5 = (c5*100)/6;
+					p5 = (c5*100)/num;
 					break;
 				case 6: c6++;
-					p6 = (c6*100)/6;
+					p6 = (c6*100)/num;
 					break;
 			}
 
