@@ -3,7 +3,7 @@
 using namespace std;
 
 float porc(int nJ, int nT){
-	p=(nJ*100.0)/nT;
+	float p=(nJ*100.0)/nT;
 	return p;
 }
 
@@ -33,13 +33,25 @@ int main(){
 		}
 	}
 
-
-	cout << "Resultado da votação" << endl;
+	cout << endl;
+	cout << "---------------------" <<endl;
+	cout << "Resultado da votacao" << endl;
 
 	cout << "Foram computados " << tVotos << " votos." << endl;
 
-	cout << "Jogador    Votos    %"<<endl;
+	if(tVotos == 0)
+		cout << "Nao houve quorum" << endl;
 
+	else{
+		cout << "Jogador    Votos    %"<<endl;
+
+		for(i=0; i<23; i++){
+			if(jog[i]!=0){
+				cout << i << "           " << jog[i] << "         " << porc(jog[i], tVotos) << endl;
+			}
+		}
+		
+	}	
 
 	return 0;
 }
