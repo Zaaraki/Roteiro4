@@ -1,6 +1,8 @@
 #include <iostream>
+#include <iomanip>
 
 using namespace std;
+
 
 float porc(int nJ, int nT){
 	float p=(nJ*100.0)/nT;
@@ -9,9 +11,9 @@ float porc(int nJ, int nT){
 
 int main(){
 
-	int jog[23], voto, tVotos=0, cont=0, i;
+	int jog[24], voto, tVotos=0, cont=0, i, vBest_Voto=0, vBest_Jog, aux;
 
-	for(i=0; i<23; i++){
+	for(i=1; i<=23; i++){
 		jog[i]=0;
 	}
 
@@ -45,12 +47,18 @@ int main(){
 	else{
 		cout << "Jogador    Votos    %"<<endl;
 
-		for(i=0; i<23; i++){
+		for(i=1; i<=23; i++){
 			if(jog[i]!=0){
-				cout << i << "           " << jog[i] << "         " << porc(jog[i], tVotos) << endl;
+				cout << i << "           " << jog[i] << "         " << fixed << setprecision(2) << porc(jog[i], tVotos) << endl;
+			}
+
+			if(jog[i]>vBest_Voto){
+				vBest_Voto = jog[i];
+				vBest_Jog = i;
+
 			}
 		}
-		
+		cout << "O melhor jogador foi " << vBest_Jog << " o numero com " << vBest_Voto << " votos, correspondendo a " << fixed << setprecision(2) << porc(vBest_Voto, tVotos) << "% do total de votos" << endl;
 	}	
 
 	return 0;
