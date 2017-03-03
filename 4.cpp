@@ -55,8 +55,8 @@ int main(){
 			if(jog[i]>vBest_Voto){
 				vBest_Voto = jog[i];
 				vBest_Jog = i;
-
 			}
+
 		}
 		cout << "O melhor jogador foi " << vBest_Jog << " o numero com " << vBest_Voto << " votos, correspondendo a " << fixed << setprecision(1) << porc(vBest_Voto, tVotos) << "% do total de votos" << endl;
 	}	
